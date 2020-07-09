@@ -1,0 +1,29 @@
+/* CSS Reset */
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px (10/16 = .625)
+    /* ^ Sets the root font size so we can easily convert to rem units */
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px (9/16 = .5625)
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px (8/16 = .5)
+    }
+
+    @include respond(lg-desktop) {
+        font-size: 75%; // 1rem = 12px (12/16 = .75)
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
